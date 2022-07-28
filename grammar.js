@@ -1285,6 +1285,7 @@ module.exports = grammar({
           optional(
             seq(
               $._arrow_operator,
+              optional($._modifiers),
               field("return_type", $._possibly_implicitly_unwrapped_type)
             )
           ),
